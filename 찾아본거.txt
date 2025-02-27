@@ -1,0 +1,29 @@
+totalJson 방식의 대한 내용 : http://www.leguar.com/unity/totaljson/apidoc/1.7/JSON.php
+
+Get : 서버에서 클라로 데이터를 불러오는 함수 작업, AuthGet 는 로그인 되어있어야지 진행할 수 있는 상황에서 데이터를 받아오는 작업
+
+post : 클라에서 서버쪽으로 데이터를 통신 시키는 작업(로그인 안한상태), AuthPost 는 로그인 되어있어야지 진행 할 수 있는 상황에서 통신을 시켜주는 작업
+
+ UnityWebRequest www을 통해서 비동기 방식으로 통신을 제어함 => 코류틴 yield return www.sendwebRequest() 
+동기 프로그래밍 경우 작업이 종료될 때까지 기다렸다가 다음 작업을 하는 것을 의미 비동기 프로그래밍은 프로그램이 실행되는 도중 어떤 행위를 요청한 뒤 그 결과를 기다리지 않고 다음 동작을 하는 것을 의미
+
+스택 : 나중에 들어온 애가 먼저 나가는 기능
+
+//Product의 클래스의 product를 i 길이값 만큼 Json배열에 대입시켜주는 작업 
+displayedProductController 28번째 줄 : Product product = new Product(array[i] as JSON);
+
+AsInt() : 문자열을 정수로 변환하는 작업
+
+바인딩 작업 : Ui 자동화를 위해서 사용 => 버튼의 이벤트를 등록할 때 onclick에서 버튼 이벤트를 등록하거나 버튼의 위치를 찾아서 onclick.addlister를 통해서 이벤트를 줘야하지만 enum을 통해서 버튼의 이름을 등록하고 get함수를 사용해서 자동화시켜줄 수 있습니다.
+
+get은 url로 통해 불러온 데이터 조회
+post은 데이터를 등록하거나 데이터를 처리하는데 사용
+put url에 등록된 데이터 값을 교체 또는 변경하는 작업 데이터 값을 전부다 입력해야한다는 단점이 있음
+patch url에 등록된 데이터 값을 교체 또는 변경하는 작업 하지만 일부만 교체 또는 변경하는 것이 가능
+Delete 은 url에 등록된 데이터 값을 삭제하는 작업
+
+Http 메소드 
+
+SafeMethods : 메소드를 호출해도 리소스 변경 x => Get(조회)
+
+Idempotent Methods : 메소드를 계속 호출 해도 결과가 똑같다는 뜻 Get,Put,Delete 은 멱등성을 가지지만 Post는 멱등성을 유지하지 않는다

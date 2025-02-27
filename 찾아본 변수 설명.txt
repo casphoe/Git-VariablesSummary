@@ -1,0 +1,200 @@
+Approximately (float a,flot b) => 두 변수 a,b 가 같은지 비교\
+
+코류틴을 사용할 때 무조건 yield return Coop(클래스)로 끝낸다.
+
+setAlpha : 오브젝트의 알파값을 결정함
+
+onEndEdit : 텍스트 내용 수정을 마친 후 입력창을 벗어날 때 호출되는 이벤트
+
+onValueChange : input field에서 텍스트 내용을 바꿨을 경우 호출되는 이벤트
+
+stirng을 계속 수정해주면 동적 할당을 해서 성능 저하 문제로  Stringbuilder를 사용
+=> string은 변경할 수 없는 형식이기 때문에 변경된 문자열을 위한 새로운 string을 만들어 냄
+StringBuilder는 변경 가능한 문자열 class(using Systeem.text로 선언)
+
+append가 문자를 stringbuilder에 추가시킴
+
+ReferenceEquals(object a,objcet b) : a b의 오브젝트 인스턴스가 동일 여부를 확인하는 변수
+
+queue.enqueue : 개체를 queue의 끝 부분에 추가하는 기능
+
+System.Environment.NewLine : 유니티에서 일반적인 줄바꿈 \n 을 넣어도 줄 바꿈이 되지 않기 때문에 위 함수를 사용하면 줄바꿈 현상을 일으킬 수 있음
+
+SpriteAtlas : 여러 개의 텍스처를 단일 텍스처로 결합하는 에셋(씬의 각 텍스처에 대해 드로우 콜이 발생 => 드로우 콜이 존재하면 리소스를 많이 소비해서 프로젝트 성능을 저하시킴)
+
+프레임 고정하는 기능 : Application.targetFrameRate 을 사용해서 고정할 수 있음 (vsyn을 사용 안해야지 프레임이 고정이 됨)
+
+Application.runInBackground : false가 되면 유니티 말고 다른 곳을 클릭하게 되면 background 로 넘어가 게임이 일시정지가 됨
+
+Screen.autorotateToPortrait : 세로 방향으로 자동으로 회전하도록 할지 결정하는 변수
+
+Screen.autorotateToPortraitUpsideDown : 장치 윗부분이 아래를 향하는,세로방향으로 자동으로 회전하도록 할지를 결정하는 변수
+
+Screen.autorotateToLandscapeLeft : 왼쪽 가로 방향으로 자동 회전을 할 수 있도록 허용하는 변수
+
+Screen.autorotateToLandscapeRight : 오른쪽 가로방향으로 자동으로 회전 할 수있도록 허용하는 변수
+
+Screen.orientation : 화면의 방향을 나타냅니다.(모바일 장치에서만 적용이됩니다)
+=> portrait : 세로 방향을 나타냅니다. portraitUpsideDown : 장치의 윗 부분이 아래를 항햐는 세로방향을 나타냅니다. landScapeLeft : 가로 방향을 나타내며, 세로 방향으로 부터 반 시계 방향으로 회전 한 상태를 나타냄
+=> landScpaeRight : 가로 방향을 나타내며, 세로 방향으로 부터 시계 방향으로 회전한 상태 ,  autorotation : 활성화 된 방향으로 자동 회전 하도록 설정합니다.
+
+extern : 외부에서 구현되는 메서드를 선언할 때 사용(한정자) 메서드를  static으로 선언해서 관리해야함 extern 한정자는 일반적으로 Interop 서비스를 사용하여 비관리 코드를 호출할 때 DllImport특성과 함께 사용
+
+[DllImport("__Internal")] : ios  플러그인 빌드(ios의 네이티브 함수를 호출하기 위해 사용) 선언 , 자바스크립트와 연동하기 위해서 사용됨(유니티에서 지원)
+
+using Extension : 확장 메소드 (이미 존재하는 타입에 타임을 재정의하거나 상속을 통하지 않고도 새로운 기능을 추가하는 것이 가능합니다.
+
+BinaryWriter 클래스 :  filestream 클래스는 파일 처리를 위한 모든 작업이 가능하지만 byte 형식의 배열을 사용해야 하는 번거로운 문제가 있습니다. 이 문제를 해결하기 위해서 BinaryWriter 클래스와 BinaryReader 클래스를 제공
+
+=> BinaryWriter 클래스는 스트림에 이진 데이터를 기록하고, BinaryReader 클래스는 스트림으로 부터 이진 데이터를 읽습니다.
+
+스트림 : 배열이나 문자열 같은 데이터 컬렉션을 말하며, 자료를 입출력 하기 위하여 사용하는 것
+=> 1. 입출력 데이터를 입출력 순서에 의해서 순차적으로 처리되는 데이터 열, 2. 데이터를 이동시킬 수 있는 다리, 3. 전송되어야 할 크기 만큼 바이트들이 모여 만들어진 통로, 4. 통신을 목적으로 한 바이트 단위의 집합
+=> 입출력에 관해 데이터를 담고있는 덩어리
+
+버퍼 : 입출력 전송 속도차이에 대한 성능을 보완하기 위해 사용, 입력속도에 비해 출력속도가 느린경우 데이터를 임시 저장하는 공간, 임시저장장치
+
+<T> : 제너릭 : 형식 매개 변수를 사용하여 코드에서 클래스나 메서드를 선언
+=> 장점 : 코드 재사용성이 높습니다, 성능이 좋습니다 => 런타임 때 데이터 형식이 결정 되는 것이 아니라, 코드에서 호출 할때 데이터 형식이 결정되기 때문에 성능  저하가 x
+
+binaryReader 
+=>> ReadInt32 : 32비트 정수를 읽는 기능, ReadByte : 한 바이트를 읽는 기능
+
+MemoryStream : 백업 저장소가 메모리인 스트림을 만듬
+=>
+canRead : 현재 스트림이 읽기를 지원하는지 나타내는 값을 가져옴
+canSeek :  현재 스트림이 검색을 지원하는지를 나타내는 값을 가져옵니다.
+canTimeOut : 현재 스트림이 시간 초과될 수 있는지를 결정하는 값을 가져옴
+canWirte : 현재 스트림이 쓰 기를 지원하는지를 나타내는 값을 가져옵니다.
+caapacity : 스트림에 할당된 바이트 수를 가져오거나 설정합니다.
+getBuffer : 스트리을 만드는데 사용된 부호 없는 바이트의 배열을 반환합니다.
+ReadAsyn(byte[],int 32,int32) : 현재 스트림에서 바이트 시퀀스를 읽고 읽은 바이트 수만큼 스트림에서 위치를 비동기적으로 앞으로 이동합니다.
+flush : flush 메서드를 재정의하여 아무런 작업도 수행되지 않도록 합니다.
+FlushAsync() : 이 스트림에 대한 모든 버퍼를 비동기적으로 지우고 버퍼링 된 모든 데이터가 내부 디바이스에 비동기적으로 쓰여지도록 합니다.
+dispose : 스트림에서 사용하는 모든 리소스를 해제
+
+encoding.utf8 : utf-8 혹은 유니코드 형식으로 외부에서 넘겨받은 문자열 처리
+- 유니티는 외부에서 넘겨 받은 유니코드나 utf-8 방식의 문자열을 인코딩-디코딩을 거치지 않고 출력하면 출력이 x 해당 문자열을 의도한 대로 출력하기 위해서는 인코딩 후 다시 디코딩 하는 과정을 거쳐야합니다.
+
+thred : 유니티는 멀티쓰레드 기반으로 제작x but c# 기반 스크립트로  thread를 사용할 수 있음
+=> MonoBehaviour 기반으로 사용되는 ApI를 thread에서 사용하게 되면 관련 Main Threead 오류가 발생(can only be calleed from the maain thread 에러 발생)
+=> 통신관련에서 thread를 사용하는 경우가 많습니다 서버 - 클라이언트(유니티)로 제작할 경우 서버에서 무수히 많은 데이터를 클라이언트에게 보냅니다. 하짐만 쓰레드를 쓰지 않고 데이터를 수신 받고 처리하는 속도가 따라가지 않습니다.
+따라서 쓰레드의 역활은 통신 데이터 처리를 하고 큐나 스택등에 데이터를 담아야함
+메인 쓰레드에서 Update와 IEnumerator를 통해서 큐를 체크하여 Dequeeue을 하고 UI에 데이터를 맵핑하면 됩니다..
+
+try,catch : 예외처리 오류를 예외로 두는 방법 기본적으로  try,catch가 사용되는데 finally도 추가로 사용할 수 있습니다.
+
+Selectable : 키보드나 마우스,터치등의 입력을 감지하여 거기에 맞는 대응을 해주는 ui
+
+ISubmitHandler : 전송 버튼이 눌렸을 때 호출하는 기능
+
+ICancelHandler : 취소 버튼이 눌렸을 때 호출
+
+IEventSystemHandler : 모든 EventSystem 이벤트들이 상속받는 기본 클래스
+
+FormerlySerializedAs : 데이터를 저장하기 위해 SerializedField와 같은 어트리뷰트를 사용 개발 도중 필드의 이름이 변경되어 기존 저장된 데이터들을 사용 x => FormerlySerializedAs  기능을 사용해서 기존 버전과 호환성 유지가능
+
+EditorBrowsable : system.componentModel로 선언해서 사용 가능, 속성 또는 메서드를 편집기에서 볼 수 있도록 지정
+
+Obsolete : 더 이상 사용하지 않거나 그럴 예정인 클래스나 함수 앞에 [Obsolete] 어트리뷰트를 붙어주면 됨
+
+mathf.Approximately : 유사한 2개의 부동 수소점 값을 비교하는 함수(실수형 근사값 비교 함수)
+
+loclPosition : 부모 transform에 대해 상대적인 위치 (부모 transform이 없으면 차이는 없음) => 부모의 position을 기준으로 잡은 로컬 포지션
+
+position은 월드 포지션(0,0,0)을 기준으로 잡힌 좌표
+
+onAlert : 크롬 및 인터넷(웹)에서 개발자가 문제를 확인하기 위해서 사용하는 함수
+
+Regex (정규표현식) : 패턴을 표현하는 언어 혹은 그 언어로 된 글자들의 연속
+
+- 전화번호,우편번호,비밀 번호등의 양식을 검사할 때
+- 텍스트 데이터에서 원하는 정보만 추출하고 싶을 때
+- 텍스트 데이터에 대한 전처리 과정이 필요한 경우
+- https://debuglog.tistory.com/37 설명
+
+BitConverter 클래스
+기본 데이터 형식을 바이트의 배열로 바이트의 배열을 기본 데이터 형식으로 변환
+ToUInt32 : 읽기 전용 바이트 범위를 32비트 부호 없는 정수로 변환
+GetBytes(UInt32) : 지정된 32비트 부호 없는 정수 값을 바이트 배열로 반환
+GetBytes(Int32) : 지정된 32비트 부호 있는 정수 값을 바이트 배열로 반환
+ToInt32(Byte[],Int32) : 4바이트에서 변환된 32비트 부호 있는 정수를 바이트 배열의 지정된 위치에 반환
+
+- 스레드의 대해서 - 
+
+프로세스란 메모리에 적재된 실행되는 프로그램 스레드랑 프로세스 내부에서 생성되는 실제로 작업을 하는 주체
+
+하나의 프로세스는 여러개의 스레드를 가질 수 있으며 같은 프로세스 안에 있는 스레드들은 코드,데이터,힙 영역은 공유하고 스택은 각각 따로 할당 된다는 특징이 존재
+
+thread.sleep(a) => 지정된 시간 a 동안 현재 스레드를 일시 중단합니다. 
+
+thread.abort : 서브 스레드를 강제종료시킬 수 있습니다.
+
+- 스레드 풀의 대해서 -
+
+using System.Threading; 이 필요하다.
+
+ThreadPool 클래스의 경우 ThreadPool.QueueUserWorkItem()을 사용하여 실행하고자 하는 메서드 델리게이트를 지정하면 시스템풀에서 쓰레드를 할당하여 실행하게된다.
+이 방식을 실행되는 메서드로부터 리턴 값을 돌려 받을 필요 없는 곳에 주로 사용 리턴값이 필요한 경우 비동기 델리게이트(Asynchronous delegate)를 사용한다.
+
+- 네트워크 의 대해서 -
+
+tcp의 대해서
+
+socket을 사용하기 위해서 유니티에서는 using System.Net, using System.Net.Sockets 을 사용
+
+socket을 선언할 때 new socket(아이피 =>사용할 주소체계, 소켓 => 데이터 전송방식, 소켓종류 => protocoltype)
+
+ipaddress.any : 모든 클라이언트에서 오는 요청을 받겠다는 의미
+
+ipendpoint : 포트와 아이피를 받아들인다는 의미
+
+bind() : server 소켓을 생성하고 listen() 상태에 들어가기 위해 준비작업을 해주는 것
+=> 해당 server 소켓이 어떤 client의 요청을 받아들인 것인지 또 요청을 받아들이는데 사용할 포트 번호를 설정해줍니다.
+ 
+Listen() : 해당 소켓을 Listen() 상태로 둠 => 해당 소켓이 연결을 대기 할 수 있는 최초 대기자 목록
+
+Client : connect() : Listen() 중인 server 소켓에 Connect() 요청을 보냅니다. 
+=> IpEndPoint 객체가 또 요구됩니다. => Server 소켓의 Ip와 포트 번호가 들어갑니다.
+=> 컴퓨터 하나에서 연결이 될 경우 루프백 아이피(IpAddress.Loopback 대신 server 소켓이 있는 컴퓨터의 Ip)를 적어주면 됨
+
+Server : Accept()
+=> 새로운 통신용 Socket 객체를 만들어서 Accept() 반환값을 넣어주면 됨
+
+- Server : 메시지 송신 -
+
+서버에서 데이터를 전송할 때 byte 값으로 보내야합니다 따라서
+Encoding.Default.GetBytes => byte 값으로 인코딩 과정을 거칩니다.
+
+BeginSend() : 데이터를 전송하는 메소드  => BeginSend(문자열,어느 위치 부터 시작 해서 전송할 지,어느 길이만큼 전송할지, 전송옵션(SocketFlags),AsyncCallback 이라는 것을 새로 생성해서 넘겨주고,연결된 소켓을 받음)
+-> AsyncCallback(sendStr) : 콜백 메소드 => 전송 과정이 다 끝나고 안에 있는 sendStr() 함수를 호출 하라는 걸 알려주는 녀석
+
+-> AsyncCallback에 호출 하는 함수 안 파라미터로 IAsyncResult을 받아야합니다.
+
+ar.AsyncState을 통해 아까 BeginSend()에서 맨 마지막으로 넘겨줬던 연결된 소켓 파라미터를 가져와야합니다.
+
+가져온 소켓객체를 통해 전송을 끝내줘야합니다.
+int strLength = transferSock.EndSend(ar) => EndSend()을 사용해서 전송을 끝낼 수 있습니다.
+
+- Client 메시지 수신 -
+
+수신과정은 송신 과정과 매우 비슷합니다.
+
+ex ): 
+//beginReceive : BeginSend와 비슷한 구조
+transferSock.BeginReceive(receiveBytes, 0, 11, SocketFlags.None, 
+                        new AsyncCallback(receiveStr), transferSock);
+
+static void receiveStr(IAsyncResult ar) {
+    Socket transferSock = (Socket)ar.AsyncState;
+    int strLength = transferSock.EndReceive(ar);
+    Console.WriteLine(Encoding.Default.GetString(receiveBytes));
+}
+
+소켓에서 사용할 수 있는 수신/전송 메소드는 BeginSend()와 BeginReceive() 말고 Send(), Receive() 가 있습니다.
+동기와 비동기의 차이점
+Begin이 들어가 있으면 비동기이고 Begin이 안들어가 있으면 동기방식입니다.
+동기 방식을 사용하면 데이터를 전송 할 때 전송이 완전히 끝나지 않으면 다른 작업을 수행하지 않습니다.
+전송이 완전히 끝내야지 다음 작업을 실행합니다.
+비동기 방식을 사용하면 전송 중이라도 다른 작업을 수행 할 수 있습니다.
+=> 동기 방식은 콜백 메소드를 필요하지 않기 때문에 코드가 간단해집니다.
