@@ -1,0 +1,8 @@
+// MySql 쿼리문 의 대한 설명
+
+MySQL Workbench 설치 & 사용법 : https://m.blog.naver.com/nieah914/221815212859
+
+쿼리문 Select 문 데이터베이스 내 테이블에서 원하는 데이터를 가져올 때 사용합니다
+ex) 1) SELECT * FROM {tbl_user} : tbl_user 테이블 모든 데이터를 조회 할 때 사용 
+Where 조건 식을 사용하면 어떤 조건으로 데이터를 조회 할 것인 지 가능합니다.
+=> 회원 정보를 찾을 때 SELECT * FROM {tbl_user} WHERE phone = {phone} : tbl_user  테이블에 phone에 맞는 회원 정보가 있는지 찾는 쿼리문
