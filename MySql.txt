@@ -6,3 +6,16 @@ MySQL Workbench 설치 & 사용법 : https://m.blog.naver.com/nieah914/221815212
 ex) 1) SELECT * FROM {tbl_user} : tbl_user 테이블 모든 데이터를 조회 할 때 사용 
 Where 조건 식을 사용하면 어떤 조건으로 데이터를 조회 할 것인 지 가능합니다.
 => 회원 정보를 찾을 때 SELECT * FROM {tbl_user} WHERE phone = {phone} : tbl_user  테이블에 phone에 맞는 회원 정보가 있는지 찾는 쿼리문
+
+DELETE 문 테이블에서 데이터를 삭제 하기 위해 사용하는 쿼리문입니다.
+ex) DELETE FROM {tbl_user} WHERE phone = '{01632314444}' :  tbl_user 테이블의 phone 에서 01632314444 회원 정보가 있으면 삭제하려는 쿼리문입니다
+=> 만약 WHERE 문이 없으면 tbl_user 테이블에 모든 데이터를 삭제하려는 쿼리문이 됩니다.
+
+UPDATE 문 테이블에서 조건에 맞는 필드 값은 변경 하거나 새로운 필드 값을 입력 해주는 쿼리문입니다.(데이터 수정)
+ex) UPDATE {tbl_user} SET name = '{moon}', nickname = '{cas}' WHERE phone = '{0163231444}' : tbl_user 테이블에 0163231444 회원 정보에 name 필드 값에 moon으로 변경하거나 필드 값을 입력 하고,
+     nickname 필드 값에 cas 으로 변경 또는 필드값을 입력 해서 데이터를 수정해주는 쿼리문
+=> SET 은 테이블에 수정할 필드에 필드 값 (컬럼에 들어갈 컬럼 값)을 지정 해주는 기능입니다 동시에 여러개를 수정할 수 있습니다.
+
+INSERT INTO 문 테이블에서 데이터를 삽입 할 때 사용하거나 다른 테이블의 데이터를 복사하거나 이동할 수 있는 쿼리문입니다.
+ex) INSERT INTO {tbl_user} (name, nickname, phone) VALUES ('kim', 'ho' '01522223333') : kim이라는 이름과 ho 닉네임, 01522223333 핸드폰 데이터를 tbl_user에 삽입 하는 쿼리문(새롭게 만들어 집니다)
+=> INSERT INTO [테이블명] ([필드1],[필드2],[필드3],...) VALUES ([값1],[값2],[값3],...) : 입력할 필드(컬럼)의 개수와 값 의 개수를 동일하게 입력을 해야 합니다.
