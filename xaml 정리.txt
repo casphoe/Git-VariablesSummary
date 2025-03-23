@@ -13,6 +13,10 @@ y : 부모에 대한 요소의 왼쪽 위 모서리의 y 좌효 0 (위쪽 가장
 
 ex) AbsoluteLayout.LayoutBounds="0.5, 0.5, 400, 80" : 0.5,0.5 는 부모 레이아웃의 가로와 세로의 50% 지점에 위치 400, 80은 너비가 400 높이가 80
 
+StackLayout  : UI 요소들을 일렬로 나란히 (세로 또는 가로) 정렬할 때 사용하는 레이아웃 컨테이너
+
+Orientation="Vertical" : 위에서 아래로 쌓고, Orientation="Horizontal" : 왼쪽에서 오른쪽으로 쌓임 
+
 GestureRecognizers : 이미지의 버튼 클릭 이벤트를 주는 기능 
 TapGestureRecognizer Tapped="OnBackgroundTapped" : 클릭 되었을 때 OnBackgroundTapped 함수가 실행 됨(클릭 되었을 때 실행 되는 함수의 이름 입력 가능합니다)
 
@@ -34,4 +38,40 @@ TextChanged="OnEntryTextChanged": Entry를 클릭해서 텍스트를 수정하�
 Completed="OnEntryCompleted" : Entry의 텍스트 입력을 완료 되었을 때 OnEntryCompleted 함수가 실행 됨 "" 안에 실행될 함수를 입력 가능
 (Unity inputField OnEndEdit 기능와 비슷한 역활을 함)
 
-Frame 
+Frame : 다른 페이지 로드하거나 전환 할 때 사용되는 기능(HTML iframe 처럼 다른 UI 콘텐츠(Page)를 로드하여 보여주는 역활)
+
+CornerRadius : XAML 기반 UI 프레임워크에서 모서리를 둥글게 만들기 위해서 사용(Border,Button,Frame 같은 컨트롤의 속성중 하나로 사용됨)
+
+Border : 테두리,배경,둥근 모서리,그림자 효과 등을 주고 싶을 때 사용되는 컨트롤, 하나의 Child만 가질 수 있습니다(시각적 꾸밈용)
+
+주요 속성 :
+
+=> BorderBrush : 테두리의 색상 (브러시)
+
+=> BorderThickness : 테두리의 두께
+
+=> Background : 내부 배경색
+
+=> Padding : 안쪽 여백
+
+Label : 텍스트 표시용 컨트롤 (Unity 에서는 Ui Text or TextMesh 와 비슷한 기능)
+
+주요 속성 :
+
+Content : Label 안에 표시할 텍스트 또는 UI 요소
+
+FontSize : 글꼴 크기
+
+FontWeight : 글꼴 굵기
+
+Background : 배경색
+
+HorizontalContentAlignment : 가로 방향 (콘텐츠를 왼쪽/가운데/오른쪽) 정렬
+
+VerticalContentAlignment : 세로 방향 (콘텐츠를 위/가운데/아래) 정렬
+
+정렬 값 :
+
+Left : 왼쪽 정렬, Top : 위쪽 정렬
+
+Center : 가운데 정렬, Right : 오른쪽 정렬, Bottom : 아래쪽 정렬, Stretch : 가능한 공간에 맞춰 늘림
