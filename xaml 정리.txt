@@ -1,2 +1,37 @@
 AbsoluteLayout : 각 요소의 위치를 절대 좌표로 지정할 수 있는 레이아웃입니다.
 AbsoluteLayout.Layoutflags = "None" : 위치를 절대적으로 , All : 요소와 위치와 크기를 상대 좌표로 설정, WidthProportional : 요소의 너비믈 부모 요소의 너비의 비율로 설정 나머지 값은 젤대 좌표
+VerticalScrollBarVisibility : 세로 스크롤 막대가 보이게 할 것인지 여부 판단
+=> Always : 콘텐츠가 보기에 맞는 경우에도 스크롤 막대가 표시
+=> Never :  내용이 보기에 맞지 않더라도 스크롤 막대가 표시 안 되는 것을 원함
+
+AbsoluteLayout.LayoutBounds : 자식 요소의 경계(위치 및 크기)를 정의하는 기능
+x : 부모에 대한 요소의 왼쪽 위 모서리의 x 좌표 0 (왼쪽 가장 자리), 1 (오른쪽 가장 자리)
+y : 부모에 대한 요소의 왼쪽 위 모서리의 y 좌효 0 (위쪽 가장 자리), 1 (아래쪽 가장 자리)
+
+너비 : 요소의 너비 절대 단위 (픽셀) 또는 상대 단위 (Auto, Star)로 지정 할 수 있음 -> Auto는 콘텐츠 크기에 따라 결정
+높이 : 요소의 높이 요소와 비슷하다고 보면 됨
+
+ex) AbsoluteLayout.LayoutBounds="0.5, 0.5, 400, 80" : 0.5,0.5 는 부모 레이아웃의 가로와 세로의 50% 지점에 위치 400, 80은 너비가 400 높이가 80
+
+GestureRecognizers : 이미지의 버튼 클릭 이벤트를 주는 기능 
+TapGestureRecognizer Tapped="OnBackgroundTapped" : 클릭 되었을 때 OnBackgroundTapped 함수가 실행 됨(클릭 되었을 때 실행 되는 함수의 이름 입력 가능합니다)
+
+Margin : 요소의 바깥쪽 여백을 가져오거나 설정하는 기능
+
+ex) : Margin "0,62,0,0" : 첫번 째 0은 왼쪽에 적용되는 여백을 의미 두번 째는 위쪽에 적용되는 여백을 나타냄, 3번 째는 오른쪽 여백, 4번 째는 아래쪽 여백을 의미합니다.
+
+Entry : 기본 텍스트 박스 (유니티에서 InputField 라고 보시면 됩니다)
+
+keyboard : Default (한글,숫자,영어 포함 만약 한글 또는 영어가 안 나올 경우 설정에 언어에서 한글 또는 영어를 추가해야 함), Keyboard="Numeric" : 숫자만 입력하게 설정
+
+Placeholder : 입력된 텍스트가 비어있을 때 표시되는 텍스트를 정의하는 구간
+
+FontSize : 입력된 텍스트 크기를 결정하는 값입니다.
+
+TextChanged="OnEntryTextChanged": Entry를 클릭해서 텍스트를 수정하거나 입력 할 때 OnEntryTextChanged 함수가 실행 됨 "" 안에 실행될 함수를 입력 가능
+(Unity inputField OnValuedChange랑 비슷)
+
+Completed="OnEntryCompleted" : Entry의 텍스트 입력을 완료 되었을 때 OnEntryCompleted 함수가 실행 됨 "" 안에 실행될 함수를 입력 가능
+(Unity inputField OnEndEdit 기능와 비슷한 역활을 함)
+
+Frame 
