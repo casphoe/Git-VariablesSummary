@@ -1,0 +1,2 @@
+AbsoluteLayout : 각 요소의 위치를 절대 좌표로 지정할 수 있는 레이아웃입니다.
+AbsoluteLayout.Layoutflags = "None" : 위치를 절대적으로 , All : 요소와 위치와 크기를 상대 좌표로 설정, WidthProportional : 요소의 너비믈 부모 요소의 너비의 비율로 설정 나머지 값은 젤대 좌표
